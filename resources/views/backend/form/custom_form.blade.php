@@ -11,7 +11,7 @@
                         <h4 class="mb-sm-0 font-size-18">Custom Form</h4>
                         <div class="page-title-right">
                             <a href="javascript:history.back()" class="btn btn-outline-dark waves-effect waves-light">
-                                <i class="fas fa-arrow-left"></i> Back
+                                <i class="bx bx-undo font-size-16 align-middle me-2"></i> Back
                             </a>
                         </div>
                     </div>
@@ -28,6 +28,13 @@
                         <div class="card-body p-4">
 
                             <form class="row g-3">
+
+                                <div class="col-md-12">
+                                    <label for="example-text-input" class="form-label">Image</label>
+                                    <input type="file" class="form-control" name="" id="image">
+                                    <img id="showImage" src="{{ asset('upload/no_image.jpg') }}" alt="Profile Image" class="p-1 bg-primary mt-3" style="width: 110px; height: 110px; object-fit: cover; border-radius: 8px;">
+                                </div>
+
 
                                 <div class="col-md-6">
                                     <label for="text" class="form-label">Text</label>
@@ -95,4 +102,16 @@
         </div>
 
     </div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#image').change(function(e) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#showImage').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(e.target.files['0']);
+            })
+        })
+    </script>
 @endsection
