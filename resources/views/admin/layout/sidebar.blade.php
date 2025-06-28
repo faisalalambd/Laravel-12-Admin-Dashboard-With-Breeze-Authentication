@@ -12,18 +12,27 @@
                 <li>
                     <a href="{{ route('admin.dashboard') }}">
                         <i data-feather="home"></i>
-                        <span data-key="t-dashboard">Dashboard</span>
+                        <span>Dashboard</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow">
                         <i data-feather="file-text"></i>
-                        <span data-key="t-apps">Apps</span>
+                        <span>Tables</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="apps-calendar.html"><span data-key="t-calendar">Calendar</span></a></li>
-                        <li><a href="apps-chat.html"><span data-key="t-chat">Chat</span></a></li>
+                        <li><a href="{{ route('custom.table') }}">Custom Table</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow">
+                        <i data-feather="file-text"></i>
+                        <span>Forms</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('custom.form') }}">Custom Form</a></li>
                     </ul>
                 </li>
 

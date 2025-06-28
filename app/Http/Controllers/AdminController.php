@@ -194,4 +194,14 @@ class AdminController extends Controller
         ];
         return back()->with($notification);
     } //End Method
+
+    public function CustomTable()
+    {
+        return view('backend.table.custom_table');
+    } //End Method
+
+    public function CustomForm()
+    {
+        return view('backend.form.custom_form');
+    } //End Method
 }

@@ -29,6 +29,12 @@ Route::middleware('admin')->group(function () {
     Route::post('/admin/profile/store', [AdminController::class, 'AdminProfileStore'])->name('admin.profile.store');
     Route::get('/admin/change/password', [AdminController::class, 'AdminChangePassword'])->name('admin.change.password');
     Route::post('/admin/password/update', [AdminController::class, 'AdminPasswordUpdate'])->name('admin.password.update');
+
+    // DataTable
+    Route::get('/custom-table', [AdminController::class, 'CustomTable'])->name('custom.table');
+
+    // Forms
+    Route::get('/custom-form', [AdminController::class, 'CustomForm'])->name('custom.form');
 });
 
 Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login');
